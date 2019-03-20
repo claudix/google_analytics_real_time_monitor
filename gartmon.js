@@ -13,16 +13,15 @@
     var lastValue;
     
     function setWindowTitle(value, visible) {
+        document.title = value + " visitors";
         if (visible) {
-            document.title = value + " visitors";
-        } else {
-            document.title = '';
+            document.title += " **";
         }
     }
     
     function notify(value) {
         var BLINKING_PERIOD = 500;
-        var NOTIFY_DURATION = 10000;
+        var NOTIFY_DURATION = 5000;
         var toggle = false;
         var times = 2*NOTIFY_DURATION / BLINKING_PERIOD;
         
